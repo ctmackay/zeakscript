@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeak Evolution Tree</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Leader Line library for drawing arrows -->
+    <script src="https://cdn.jsdelivr.net/npm/leader-line@1.0.7/leader-line.min.js"></script>
+</head>
+<body>
+    <button id="resetBtn" class="reset-button" onclick="resetPositions()" title="Reset all positions to default">
+        Reset Layout
+    </button>
+
+    <div class="tree-container">
+        <h1>Zeak Evolution Tree</h1>
+
+        <!-- C Tier (Bottom/Starting forms) -->
+        <div id="cuteBabe" class="evolution-node tier-c" style="left: 15%; top: 80%;"
+             data-name="Cute Babe" data-hp="62" data-attack="57" data-defense="52" data-speed="60" data-special="Basic Form">
+            <img src="placeholder.jpg" alt="Cute Babe">
+            <div class="nickname">Cute Babe</div>
+        </div>
+
+        <div id="jlo" class="evolution-node tier-c" style="left: 5%; top: 75%;"
+             data-name="J-Lo" data-hp="60" data-attack="55" data-defense="50" data-speed="58" data-special="Unicorns">
+            <img src="placeholder.jpg" alt="J-Lo">
+            <div class="nickname">J-Lo</div>
+        </div>
+
+        <div id="ilianaBabe" class="evolution-node tier-c" style="left: 25%; top: 85%;"
+             data-name="Iliana Babe" data-hp="61" data-attack="56" data-defense="51" data-speed="59" data-special="Regional">
+            <img src="placeholder.jpg" alt="Iliana Babe">
+            <div class="nickname">Iliana Babe</div>
+        </div>
+
+        <div id="demon" class="evolution-node tier-c" style="left: 40%; top: 82%;"
+             data-name="Demon" data-hp="63" data-attack="58" data-defense="53" data-speed="61" data-special="Hangry Variant">
+            <img src="placeholder.jpg" alt="Demon">
+            <div class="nickname">Demon</div>
+        </div>
+
+        <div id="crochetDemon" class="evolution-node tier-c" style="left: 55%; top: 88%;"
+             data-name="Crochet Demon" data-hp="64" data-attack="59" data-defense="54" data-speed="62" data-special="Hobbies">
+            <img src="placeholder.jpg" alt="Crochet Demon">
+            <div class="nickname">Crochet Demon</div>
+        </div>
+
+        <!-- B Tier (Middle evolutions) -->
+        <div id="lion" class="evolution-node tier-b" style="left: 8%; top: 65%;"
+             data-name="Lion" data-hp="72" data-attack="67" data-defense="62" data-speed="70" data-special="Glasses On">
+            <img src="placeholder.jpg" alt="Lion">
+            <div class="nickname">Lion</div>
+        </div>
+
+        <div id="gooooodZeak" class="evolution-node tier-b" style="left: 2%; top: 60%;"
+             data-name="Goooood Zeak / LA Ho" data-hp="70" data-attack="65" data-defense="60" data-speed="68" data-special="LA Vibe">
+            <img src="placeholder.jpg" alt="Goooood Zeak">
+            <div class="nickname">Goooood Zeak</div>
+        </div>
+
+        <div id="sideZeak" class="evolution-node tier-b" style="left: 18%; top: 62%;"
+             data-name="Side Zeak" data-hp="71" data-attack="66" data-defense="61" data-speed="69" data-special="Sideways Orientation">
+            <img src="placeholder.jpg" alt="Side Zeak">
+            <div class="nickname">Side Zeak</div>
+        </div>
+
+        <div id="tinyZeak" class="evolution-node tier-b" style="left: 20%; top: 70%;"
+             data-name="Tiny Zeak" data-hp="68" data-attack="63" data-defense="58" data-speed="66" data-special="Alcohol Infusion">
+            <img src="placeholder.jpg" alt="Tiny Zeak">
+            <div class="nickname">Tiny Zeak</div>
+        </div>
+
+        <div id="buckZeak" class="evolution-node tier-b" style="left: 28%; top: 68%;"
+             data-name="Buck ZEAK" data-hp="73" data-attack="68" data-defense="63" data-speed="71" data-special="Sideways Orientation">
+            <img src="placeholder.jpg" alt="Buck ZEAK">
+            <div class="nickname">Buck ZEAK</div>
+        </div>
+
+        <div id="popcornDemon" class="evolution-node tier-b" style="left: 35%; top: 65%;"
+             data-name="Popcorn Demon" data-hp="70" data-attack="65" data-defense="60" data-speed="68" data-special="Enhanced">
+            <img src="placeholder.jpg" alt="Popcorn Demon">
+            <div class="nickname">Popcorn Demon</div>
+        </div>
+
+        <div id="seaDevil" class="evolution-node tier-b" style="left: 44%; top: 68%;"
+             data-name="Sea Devil" data-hp="71" data-attack="66" data-defense="61" data-speed="69" data-special="Water Evolution">
+            <img src="placeholder.jpg" alt="Sea Devil">
+            <div class="nickname">Sea Devil</div>
+        </div>
+
+        <div id="dutchBabe" class="evolution-node tier-b" style="left: 52%; top: 70%;"
+             data-name="Dutch Babe" data-hp="72" data-attack="67" data-defense="62" data-speed="70" data-special="Regional">
+            <img src="placeholder.jpg" alt="Dutch Babe">
+            <div class="nickname">Dutch Babe</div>
+        </div>
+
+        <div id="seaBrat" class="evolution-node tier-b" style="left: 58%; top: 66%;"
+             data-name="Sea Brat" data-hp="74" data-attack="69" data-defense="64" data-speed="72" data-special="Devil">
+            <img src="placeholder.jpg" alt="Sea Brat">
+            <div class="nickname">Sea Brat</div>
+        </div>
+
+        <div id="youngBabe" class="evolution-node tier-b" style="left: 65%; top: 68%;"
+             data-name="Young Babe" data-hp="75" data-attack="70" data-defense="65" data-speed="73" data-special="Youthful">
+            <img src="placeholder.jpg" alt="Young Babe">
+            <div class="nickname">Young Babe</div>
+        </div>
+
+        <div id="rockZeak" class="evolution-node tier-b" style="left: 75%; top: 70%;"
+             data-name="Rock Zeak" data-hp="76" data-attack="71" data-defense="66" data-speed="74" data-special="Rocky Region">
+            <img src="placeholder.jpg" alt="Rock Zeak">
+            <div class="nickname">Rock Zeak</div>
+        </div>
+
+        <!-- A Tier (Advanced evolutions) -->
+        <div id="onion" class="evolution-node tier-a" style="left: 5%; top: 45%;"
+             data-name="Onion" data-hp="80" data-attack="75" data-defense="70" data-speed="78" data-special="Layered Defense">
+            <img src="placeholder.jpg" alt="Onion">
+            <div class="nickname">Onion</div>
+        </div>
+
+        <div id="shortZeak" class="evolution-node tier-a" style="left: 13%; top: 48%;"
+             data-name="Short Zeak" data-hp="82" data-attack="77" data-defense="72" data-speed="80" data-special="Compact Power">
+            <img src="placeholder.jpg" alt="Short Zeak">
+            <div class="nickname">Short Zeak</div>
+        </div>
+
+        <div id="canadianAngel" class="evolution-node tier-a" style="left: 23%; top: 45%;"
+             data-name="Canadian Angel" data-hp="84" data-attack="79" data-defense="75" data-speed="82" data-special="Hiking Mode">
+            <img src="placeholder.jpg" alt="Canadian Angel">
+            <div class="nickname">Canadian Angel</div>
+        </div>
+
+        <div id="ecoZeak" class="evolution-node tier-a" style="left: 30%; top: 50%;"
+             data-name="Eco Zeak" data-hp="81" data-attack="76" data-defense="73" data-speed="79" data-special="Grass Evolution">
+            <img src="placeholder.jpg" alt="Eco Zeak">
+            <div class="nickname">Eco Zeak</div>
+        </div>
+
+        <div id="drunkZeak" class="evolution-node tier-a" style="left: 22%; top: 53%;"
+             data-name="Drunk Zeak" data-hp="80" data-attack="75" data-defense="71" data-speed="78" data-special="Alcohol Infusion">
+            <img src="placeholder.jpg" alt="Drunk Zeak">
+            <div class="nickname">Drunk Zeak</div>
+        </div>
+
+        <div id="eZeak" class="evolution-node tier-a" style="left: 38%; top: 52%;"
+             data-name="E-Zeak" data-hp="81" data-attack="76" data-defense="72" data-speed="79" data-special="Power">
+            <img src="placeholder.jpg" alt="E-Zeak">
+            <div class="nickname">E-Zeak</div>
+        </div>
+
+        <div id="sillyZeak" class="evolution-node tier-a" style="left: 48%; top: 50%;"
+             data-name="Silly Zeak" data-hp="83" data-attack="78" data-defense="74" data-speed="81" data-special="Silliness">
+            <img src="placeholder.jpg" alt="Silly Zeak">
+            <div class="nickname">Silly Zeak</div>
+        </div>
+
+        <div id="seaZeak" class="evolution-node tier-a" style="left: 56%; top: 48%;"
+             data-name="SEA ZEAK" data-hp="85" data-attack="80" data-defense="76" data-speed="83" data-special="Water Evolution">
+            <img src="placeholder.jpg" alt="SEA ZEAK">
+            <div class="nickname">SEA ZEAK</div>
+        </div>
+
+        <div id="seaSerpent" class="evolution-node tier-a" style="left: 64%; top: 50%;"
+             data-name="Sea Serpent" data-hp="83" data-attack="78" data-defense="74" data-speed="81" data-special="Hawaii">
+            <img src="placeholder.jpg" alt="Sea Serpent">
+            <div class="nickname">Sea Serpent</div>
+        </div>
+
+        <div id="ancientBabe" class="evolution-node tier-a" style="left: 75%; top: 48%;"
+             data-name="Ancient Babe" data-hp="86" data-attack="81" data-defense="77" data-speed="84" data-special="Iced Out">
+            <img src="placeholder.jpg" alt="Ancient Babe">
+            <div class="nickname">Ancient Babe</div>
+        </div>
+
+        <div id="seaFossil" class="evolution-node tier-a" style="left: 68%; top: 55%;"
+             data-name="Sea Fossil" data-hp="82" data-attack="77" data-defense="73" data-speed="80" data-special="Prehistoric">
+            <img src="placeholder.jpg" alt="Sea Fossil">
+            <div class="nickname">Sea Fossil</div>
+        </div>
+
+        <!-- S Tier (Ultimate forms) -->
+        <div id="frog" class="evolution-node tier-s" style="left: 8%; top: 25%;"
+             data-name="Frog" data-hp="89" data-attack="84" data-defense="82" data-speed="87" data-special="Eyelash Enhancement">
+            <img src="placeholder.jpg" alt="Frog">
+            <div class="nickname">Frog</div>
+        </div>
+
+        <div id="flower" class="evolution-node tier-s" style="left: 20%; top: 20%;"
+             data-name="Flower" data-hp="95" data-attack="88" data-defense="85" data-speed="92" data-special="Peak Garden Form">
+            <img src="placeholder.jpg" alt="Flower">
+            <div class="nickname">Flower</div>
+        </div>
+
+        <div id="grassEvol" class="evolution-node tier-s" style="left: 30%; top: 22%;"
+             data-name="Grass Evol" data-hp="90" data-attack="85" data-defense="80" data-speed="88" data-special="Nature's Blessing">
+            <img src="placeholder.jpg" alt="Grass Evol">
+            <div class="nickname">Grass Evol</div>
+        </div>
+
+        <div id="angel" class="evolution-node tier-s" style="left: 38%; top: 25%;"
+             data-name="Angel" data-hp="93" data-attack="90" data-defense="87" data-speed="95" data-special="Divine Grace">
+            <img src="placeholder.jpg" alt="Angel">
+            <div class="nickname">Angel</div>
+        </div>
+
+        <div id="windyEvol" class="evolution-node tier-s" style="left: 48%; top: 20%;"
+             data-name="Windy Evol" data-hp="91" data-attack="89" data-defense="83" data-speed="94" data-special="Wind Walker">
+            <img src="placeholder.jpg" alt="Windy Evol">
+            <div class="nickname">Windy Evol</div>
+        </div>
+
+        <div id="seaAngel" class="evolution-node tier-s" style="left: 50%; top: 28%;"
+             data-name="Sea Angel / Sea Weed" data-hp="92" data-attack="87" data-defense="84" data-speed="91" data-special="Angelic">
+            <img src="placeholder.jpg" alt="Sea Angel">
+            <div class="nickname">Sea Angel</div>
+        </div>
+
+        <div id="yuzuBabe" class="evolution-node tier-s" style="left: 62%; top: 22%;"
+             data-name="Yuzu Babe" data-hp="94" data-attack="91" data-defense="88" data-speed="90" data-special="Paris Evolution">
+            <img src="placeholder.jpg" alt="Yuzu Babe">
+            <div class="nickname">Yuzu Babe</div>
+        </div>
+
+        <div id="seaBabe" class="evolution-node tier-s" style="left: 75%; top: 25%;"
+             data-name="Sea Babe" data-hp="96" data-attack="92" data-defense="89" data-speed="93" data-special="Ocean Master">
+            <img src="placeholder.jpg" alt="Sea Babe">
+            <div class="nickname">Sea Babe</div>
+        </div>
+    </div>
+
+    <!-- Pokemon Stats Modal -->
+    <div id="statsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="stats-container">
+                <h2 id="pokemonName"></h2>
+                <div class="stats">
+                    <div class="stat-bar">
+                        <label>HP:</label>
+                        <div class="bar"><div class="fill hp-fill"></div></div>
+                        <span class="stat-value" id="hpValue"></span>
+                    </div>
+                    <div class="stat-bar">
+                        <label>Attack:</label>
+                        <div class="bar"><div class="fill attack-fill"></div></div>
+                        <span class="stat-value" id="attackValue"></span>
+                    </div>
+                    <div class="stat-bar">
+                        <label>Defense:</label>
+                        <div class="bar"><div class="fill defense-fill"></div></div>
+                        <span class="stat-value" id="defenseValue"></span>
+                    </div>
+                    <div class="stat-bar">
+                        <label>Speed:</label>
+                        <div class="bar"><div class="fill speed-fill"></div></div>
+                        <span class="stat-value" id="speedValue"></span>
+                    </div>
+                    <div class="special-ability">
+                        <label>Special Ability:</label>
+                        <span id="specialAbility"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
