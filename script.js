@@ -289,8 +289,35 @@ function updateLines() {
     });
 }
 
-// Add reset button functionality (optional - you can add a button in HTML)
+// Add reset button functionality
 window.resetPositions = function() {
     localStorage.removeItem('zeakPositions');
     location.reload();
+};
+
+// Dump current positions to console for setting new defaults
+window.dumpPositions = function() {
+    const positions = {};
+
+    evolutionNodes.forEach(node => {
+        positions[node.id] = {
+            left: node.style.left,
+            top: node.style.top
+        };
+    });
+
+    console.log('=== CURRENT POSITIONS ===\n');
+    console.log('Copy this into your HTML file to set these as the default positions:\n');
+
+    evolutionNodes.forEach(node => {
+        const id = node.id;
+        const left = node.style.left;
+        const top = node.style.top;
+        console.log(`${id}: left: ${left}; top: ${top};`);
+    });
+
+    console.log('\n=== JSON FORMAT (for reference) ===');
+    console.log(JSON.stringify(positions, null, 2));
+
+    return positions;
 };
